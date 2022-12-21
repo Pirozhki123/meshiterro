@@ -1,4 +1,4 @@
-class PostImageController < ApplicationController
+class PostImagesController < ApplicationController
   def new
     @post_image = PostImage.new
   end
@@ -16,7 +16,10 @@ class PostImageController < ApplicationController
   def show
   end
 
-  private
+  def destroy
+  end
+
+    private
 
   def post_image_params
     params.require(:post_image).permit(:shop_name, :image, :caption)
